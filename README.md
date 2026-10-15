@@ -36,9 +36,14 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Prototype complete (v9) · preparing the public release.**
-Free to play on itch.io is the plan, with an optional donation: $1 or more unlocks small
-**cosmetic** supporter perks. Nothing that affects combat or the economy is for sale.
+**Prototype complete (v9.1) · preparing the public release.**
+Free to play on itch.io is the plan, with an optional donation: **$2–$5 unlocks small cosmetic
+supporter perks**. Nothing that affects combat or the economy is for sale.
+
+## Where donations go
+
+**30% of every donation, of any amount, goes to the Armed Forces of Ukraine (ZSU).**
+The rest supports development of the game.
 
 ## Try it
 
@@ -52,10 +57,18 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 
 # Updates
 
+## 14 Oct 2026 — v9.1: the name is official
+- **Freedom Volunteer** is now the name everywhere: title screen, interface and the Codex
+- Supply runs can be split across several trips; the mission board shows a delivery progress bar
+  and the HUD counts down what is still due. Miss the deadline and you are still paid half rate
+  for what you delivered
+- No more duplicate supply runs for the same goods at the same station
+- The sector map shows its zoom level and the radius in view
+- Donation terms settled: **$2–$5 unlocks the supporter perks**, and **30% of every donation goes to the ZSU**
+
 ## 14 Oct 2026 — Getting ready to publish
 - Mapped the full path to a public release in nine steps: decisions, accounts, names and legal,
   release build, supporter system, the itch.io page, testing, launch, and after-launch care
-- Settled the model: **free to play**, suggested donation $3, $1 minimum for the Supporter Pack
 - Set up this devlog and a private source repository
 
 ## 13 Oct 2026 — Rights, credits and security
@@ -125,6 +138,6 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 
 ---
 
-*Working title in the screenshots: Voxel Frontier.*
+*Early builds used the working title Voxel Frontier.*
 Created, designed and directed by **Oleksandr Yurchak**, programmed with AI assistance (Claude, Anthropic).
 © 2026 Oleksandr Yurchak. All rights reserved — see [LICENSE](LICENSE).

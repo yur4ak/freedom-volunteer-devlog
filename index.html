@@ -6,7 +6,7 @@
 <title>Freedom Volunteer · Devlog</title>
 <meta name="description" content="Development updates for Freedom Volunteer, a voxel-neon 3D space sim that plays in the browser.">
 <meta property="og:title" content="Freedom Volunteer · Devlog">
-<meta property="og:description" content="A volunteer pilot, a battered fighter and a frontier at war. A voxel-neon 3D space sim for the browser.">
+<meta property="og:description" content="A volunteer pilot, a battered fighter and a frontier at war. A free voxel-neon 3D space sim for the browser; 30% of donations go to the ZSU.">
 <meta property="og:image" content="https://yur4ak.github.io/freedom-volunteer-devlog/assets/title.jpg">
 <meta name="theme-color" content="#05060f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,11 @@ h1 span{display:block;color:var(--void);-webkit-text-stroke:2px #f4f7ff;text-sha
 .lede{max-width:62ch;margin:22px 0 0;font-size:17px;color:var(--soft);}
 .status{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
 .chip{font:600 11.5px/1 var(--f-ui);letter-spacing:.16em;text-transform:uppercase;padding:8px 11px;border:1px solid currentColor;}
-.chip.ok{color:var(--cyan);} .chip.next{color:var(--amber);} .chip.free{color:#a6ff6b;}
+.chip.ok{color:var(--cyan);} .chip.next{color:var(--amber);} .chip.free{color:#a6ff6b;} .chip.zsu{color:var(--gold);}
+.give{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;padding:18px 20px;background:var(--panel);border:1px solid rgba(255,210,58,.35);border-left:4px solid var(--gold);}
+.give .pct{font:700 clamp(40px,7vw,64px)/1 var(--f-display);color:var(--gold);text-shadow:0 0 22px rgba(255,210,58,.35);}
+.give p{margin:0;color:var(--soft);} .give p b{color:var(--ink);}
+@media (max-width:520px){.give{grid-template-columns:minmax(0,1fr);}}
 figure{margin:0;}
 .hero{margin:8px 0 0;border:1px solid var(--rule);box-shadow:0 30px 80px rgba(0,0,0,.55);}
 .hero img,.gallery img{display:block;width:100%;height:auto;}
@@ -85,16 +89,17 @@ footer p{margin:0 0 6px;}
   <h1>Freedom<span>Volunteer</span></h1>
   <p class="lede">A volunteer pilot, a battered Kestrel fighter and a frontier at war. Fly out of Kyiv Prime for the Coalition — Ukraine, with the EU and the US behind it — against the fictional CRINK pact. Trade and build factories, take contracts, defend the front from raids, liberate occupied sectors, then bring down the Zorus Citadel.</p>
   <div class="status">
-    <span class="chip ok">Prototype complete · v9</span>
+    <span class="chip ok">Prototype complete · v9.1</span>
     <span class="chip next">Preparing public release</span>
     <span class="chip free">Free to play</span>
+    <span class="chip zsu">30% of donations to the ZSU</span>
   </div>
 </header>
 
 <figure class="hero">
-  <img src="assets/title.jpg" width="1280" height="720" alt="Title screen: a blue voxel fighter drifting against a dark nebula, beside the game's story text and control sheet">
+  <img src="assets/title.jpg" width="1280" height="720" alt="Title screen: the Freedom Volunteer logo beside a voxel fighter against a dark nebula, with the story text and control sheet">
 </figure>
-<figcaption>Title screen, under the working title Voxel Frontier.</figcaption>
+<figcaption>Title screen</figcaption>
 
 <section aria-labelledby="h-what">
   <h2 id="h-what">What's in it</h2>
@@ -121,18 +126,36 @@ footer p{margin:0 0 6px;}
 
 <section aria-labelledby="h-play">
   <h2 id="h-play">Play</h2>
-  <p class="note">Coming soon on itch.io — free, in a desktop browser, with mouse and keyboard. An optional donation of $1 or more will unlock small <strong>cosmetic</strong> supporter perks. Nothing that affects combat or the economy is for sale.</p>
+  <p class="note">Coming soon on itch.io — free, in a desktop browser, with mouse and keyboard. An optional donation of <strong>$2–$5</strong> will unlock small <strong>cosmetic</strong> supporter perks. Nothing that affects combat or the economy is for sale.</p>
+</section>
+
+<section aria-labelledby="h-give">
+  <h2 id="h-give">Where donations go</h2>
+  <div class="give">
+    <span class="pct">30%</span>
+    <p><b>Of every donation, of any amount, goes to the Armed Forces of Ukraine (ZSU).</b> The rest supports development of the game.</p>
+  </div>
 </section>
 
 <section aria-labelledby="h-log">
   <h2 id="h-log">Updates</h2>
   <ol class="log">
+    <li>
+      <span class="when"><b>v9.1 · 14 Oct 2026</b>Latest build</span>
+      <h3>The name is official</h3>
+      <ul>
+        <li><strong>Freedom Volunteer</strong> is now the name everywhere: title screen, interface and the Codex</li>
+        <li>Supply runs can be split across trips, with a delivery progress bar; a missed deadline still pays half rate for what arrived</li>
+        <li>No duplicate supply runs for the same goods at the same station</li>
+        <li>The sector map shows its zoom level and the radius in view</li>
+      </ul>
+    </li>
     <li class="pub">
       <span class="when"><b>14 Oct 2026</b>Release prep</span>
       <h3>Getting ready to publish</h3>
       <ul>
         <li>Mapped the full path to a public release in nine steps, from decisions and accounts to launch and after-launch care</li>
-        <li>Settled the model: <strong>free to play</strong>, $1 minimum for the Supporter Pack, $3 suggested</li>
+        <li>Donation terms settled: <strong>$2–$5 unlocks the supporter perks</strong>, and <strong>30% of every donation goes to the ZSU</strong></li>
         <li>Opened this devlog</li>
       </ul>
     </li>
@@ -154,7 +177,7 @@ footer p{margin:0 0 6px;}
       </ul>
     </li>
     <li>
-      <span class="when"><b>v9</b>Latest build</span>
+      <span class="when"><b>v9</b></span>
       <h3>Jammers, warrior ranks and a sound fix</h3>
       <ul>
         <li><strong>Zhitel EW jammers</strong>: slow, shielded ships whose 500 m fields scramble your sensors; three overlapping fields blind you</li>
