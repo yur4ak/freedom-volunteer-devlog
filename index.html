@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Freedom Volunteer · Devlog</title>
+<meta name="description" content="Development updates for Freedom Volunteer, a voxel-neon 3D space sim that plays in the browser.">
+<meta property="og:title" content="Freedom Volunteer · Devlog">
+<meta property="og:description" content="A volunteer pilot, a battered fighter and a frontier at war. A voxel-neon 3D space sim for the browser.">
+<meta property="og:image" content="https://yur4ak.github.io/freedom-volunteer-devlog/assets/title.jpg">
+<meta name="theme-color" content="#05060f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap">
+<style>
+/* Layout: the game's own HUD language — void background, cyan/magenta chromatic headline,
+   one reading column; updates hang off a single cyan rail like nav markers. */
+:root{
+  --void:#05060f; --panel:#0b0f24; --ink:#e6eeff; --mute:#8b93b8; --soft:#c3cbe8;
+  --cyan:#5ef2ff; --magenta:#ff3d9a; --amber:#ffb547; --gold:#ffd23a;
+  --rule:rgba(94,242,255,.22);
+  --f-display:"Silkscreen","Courier New",monospace;
+  --f-ui:"Chakra Petch","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;}
+html{background:var(--void);}
+body{margin:0;background:var(--void);color:var(--ink);font:500 16px/1.6 var(--f-ui);-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(ellipse 80% 50% at 85% 0%,rgba(255,61,154,.10),transparent 70%),radial-gradient(ellipse 70% 50% at 0% 30%,rgba(94,242,255,.08),transparent 70%);
+  background-repeat:no-repeat;}
+a{color:var(--cyan);text-underline-offset:3px;}
+a:hover{color:#9ff8ff;}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px;}
+header{padding:56px 0 28px;}
+.eyebrow{margin:0 0 14px;font:600 12px/1 var(--f-ui);letter-spacing:.32em;text-transform:uppercase;color:var(--cyan);}
+h1{margin:0;font:700 clamp(40px,9vw,92px)/.9 var(--f-display);letter-spacing:.02em;color:#f4f7ff;text-wrap:balance;
+  text-shadow:4px 0 0 rgba(255,61,154,.7),-4px 0 0 rgba(94,242,255,.7),0 0 40px rgba(94,242,255,.3);}
+h1 span{display:block;color:var(--void);-webkit-text-stroke:2px #f4f7ff;text-shadow:4px 0 0 rgba(255,61,154,.5),-4px 0 0 rgba(94,242,255,.5);}
+.lede{max-width:62ch;margin:22px 0 0;font-size:17px;color:var(--soft);}
+.status{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.chip{font:600 11.5px/1 var(--f-ui);letter-spacing:.16em;text-transform:uppercase;padding:8px 11px;border:1px solid currentColor;}
+.chip.ok{color:var(--cyan);} .chip.next{color:var(--amber);} .chip.free{color:#a6ff6b;}
+figure{margin:0;}
+.hero{margin:8px 0 0;border:1px solid var(--rule);box-shadow:0 30px 80px rgba(0,0,0,.55);}
+.hero img,.gallery img{display:block;width:100%;height:auto;}
+figcaption{font:500 12.5px/1.4 var(--f-ui);color:var(--mute);padding:8px 2px 0;}
+section{padding:44px 0 0;}
+h2{margin:0 0 18px;font:700 clamp(22px,3.4vw,30px)/1.1 var(--f-display);letter-spacing:.04em;
+  text-shadow:2px 0 0 rgba(255,61,154,.55),-2px 0 0 rgba(94,242,255,.55);}
+.features{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.features div{background:var(--panel);border:1px solid var(--rule);border-top:2px solid var(--cyan);padding:14px 16px;}
+.features b{display:block;font:700 13px/1.25 var(--f-display);letter-spacing:.03em;color:var(--ink);margin-bottom:6px;}
+.features p{margin:0;font-size:14.5px;line-height:1.5;color:var(--soft);}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));}.gallery figure:last-child{grid-column:1/-1;}}
+.gallery figure{border:1px solid var(--rule);background:var(--panel);}
+.gallery figcaption{padding:8px 10px 10px;}
+/* timeline */
+ol.log{list-style:none;margin:0;padding:0 0 0 22px;border-left:1px solid var(--rule);}
+ol.log li{position:relative;padding:0 0 30px 6px;}
+ol.log li::before{content:"";position:absolute;left:-28px;top:6px;width:10px;height:10px;transform:rotate(45deg);
+  background:var(--void);border:2px solid var(--cyan);box-shadow:0 0 10px rgba(94,242,255,.6);}
+ol.log li.pub::before{border-color:var(--amber);box-shadow:0 0 10px rgba(255,181,71,.6);}
+.when{font:600 11px/1 var(--f-ui);letter-spacing:.22em;text-transform:uppercase;color:var(--mute);}
+.when b{color:var(--cyan);font-weight:700;margin-right:8px;}
+li.pub .when b{color:var(--amber);}
+ol.log h3{margin:8px 0 8px;font:700 17px/1.25 var(--f-display);letter-spacing:.02em;}
+ol.log ul{margin:0;padding-left:18px;color:var(--soft);font-size:15px;}
+ol.log ul li{padding:0 0 4px;}
+ol.log ul li::before{display:none;}
+ol.log strong{color:var(--ink);}
+.note{max-width:66ch;color:var(--soft);}
+footer{margin:56px 0 0;padding:20px 0 48px;border-top:1px solid var(--rule);font-size:13.5px;color:var(--mute);}
+footer p{margin:0 0 6px;}
+@media (max-width:640px){.gallery{grid-template-columns:minmax(0,1fr);} header{padding-top:36px;} h1 span{-webkit-text-stroke:1.5px #f4f7ff;}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Devlog · voxel-neon space sim · browser</p>
+  <h1>Freedom<span>Volunteer</span></h1>
+  <p class="lede">A volunteer pilot, a battered Kestrel fighter and a frontier at war. Fly out of Kyiv Prime for the Coalition — Ukraine, with the EU and the US behind it — against the fictional CRINK pact. Trade and build factories, take contracts, defend the front from raids, liberate occupied sectors, then bring down the Zorus Citadel.</p>
+  <div class="status">
+    <span class="chip ok">Prototype complete · v9</span>
+    <span class="chip next">Preparing public release</span>
+    <span class="chip free">Free to play</span>
+  </div>
+</header>
+
+<figure class="hero">
+  <img src="assets/title.jpg" width="1280" height="720" alt="Title screen: a blue voxel fighter drifting against a dark nebula, beside the game's story text and control sheet">
+</figure>
+<figcaption>Title screen, under the working title Voxel Frontier.</figcaption>
+
+<section aria-labelledby="h-what">
+  <h2 id="h-what">What's in it</h2>
+  <div class="features">
+    <div><b>33 sectors, one economy</b><p>Jump gates link hand-placed sectors. Eleven wares flow between stations that produce and consume them; prices follow stock.</p></div>
+    <div><b>A front that moves</b><p>Raids, occupation, liberation and counter-offensives, driven by pact strength and coalition morale.</p></div>
+    <div><b>Instruments you earn</b><p>The stock navigation suite lags, flickers and loses lock. Better suites, reactors and software sharpen the picture.</p></div>
+    <div><b>Enemies with character</b><p>Dodging kamikaze drones, gun-run fighters, snipers, minelayers, carriers, EW jammers, flagships — and ranks that rise with yours.</p></div>
+    <div><b>Solid voxel asteroids</b><p>Carve giant rocks one cube at a time, then scan and map the hidden veins inside.</p></div>
+    <div><b>Your own operation</b><p>Wingmen, hired trader pilots, missions, factories, a pilot log and a campaign save.</p></div>
+    <div><b>Bonus singularities</b><p>Black holes lead to an event-horizon tunnel and a tesseract that wraps space around you.</p></div>
+    <div><b>Made in code</b><p>Every ship, station and rock is generated as voxels; all sound and music are synthesized live.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-shots">
+  <h2 id="h-shots">Screens</h2>
+  <div class="gallery">
+    <figure><img src="assets/flight.jpg" width="1280" height="720" loading="lazy" alt="Cockpit view undocking at Kyiv Prime, with shield, hull and energy bars, a target panel, flight log and 3D scanner"><figcaption>Undocking at Kyiv Prime</figcaption></figure>
+    <figure><img src="assets/galaxy.jpg" width="1280" height="720" loading="lazy" alt="Galaxy map: a grid of 33 sectors coloured by faction, with occupied sectors marked and pact strength and morale meters"><figcaption>The 33-sector galaxy map</figcaption></figure>
+    <figure><img src="assets/sector.jpg" width="1280" height="720" loading="lazy" alt="Sector map of Kyiv Prime showing stations, jump gates and an autopilot dock button"><figcaption>Sector map and autopilot</figcaption></figure>
+  </div>
+</section>
+
+<section aria-labelledby="h-play">
+  <h2 id="h-play">Play</h2>
+  <p class="note">Coming soon on itch.io — free, in a desktop browser, with mouse and keyboard. An optional donation of $1 or more will unlock small <strong>cosmetic</strong> supporter perks. Nothing that affects combat or the economy is for sale.</p>
+</section>
+
+<section aria-labelledby="h-log">
+  <h2 id="h-log">Updates</h2>
+  <ol class="log">
+    <li class="pub">
+      <span class="when"><b>14 Oct 2026</b>Release prep</span>
+      <h3>Getting ready to publish</h3>
+      <ul>
+        <li>Mapped the full path to a public release in nine steps, from decisions and accounts to launch and after-launch care</li>
+        <li>Settled the model: <strong>free to play</strong>, $1 minimum for the Supporter Pack, $3 suggested</li>
+        <li>Opened this devlog</li>
+      </ul>
+    </li>
+    <li class="pub">
+      <span class="when"><b>13 Oct 2026</b>Release prep</span>
+      <h3>Rights, credits and security</h3>
+      <ul>
+        <li>The game stays all rights reserved; its source is private</li>
+        <li>A credits screen will carry the open-source licenses the game relies on</li>
+        <li>Supporter codes will be checked by a small server and returned as signed tokens, so no secret ships inside the game</li>
+      </ul>
+    </li>
+    <li class="pub">
+      <span class="when"><b>11 Oct 2026</b>Release prep</span>
+      <h3>The publishing plan</h3>
+      <ul>
+        <li>itch.io chosen: it handles payments, tax and refunds, and web games are first-class there</li>
+        <li>Perks will be cosmetic only: liveries, a supporter badge, a Volunteer Wall, extra save slots, HUD themes</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v9</b>Latest build</span>
+      <h3>Jammers, warrior ranks and a sound fix</h3>
+      <ul>
+        <li><strong>Zhitel EW jammers</strong>: slow, shielded ships whose 500 m fields scramble your sensors; three overlapping fields blind you</li>
+        <li><strong>Enemy warrior ranks</strong> from Ryadovoy to General, scaled to your own pilot level — tougher pilots, better loot</li>
+        <li>Factions pay high-ranked pilots to patrol; salvaging abandoned cargo earns rank</li>
+        <li>Rank ladders show points to the next rank; trader pilots show lifetime earnings</li>
+        <li>Louder, rebalanced audio; weapon boosts last 1–3 minutes</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v8</b></span>
+      <h3>Rocks, harvesters and the full Codex</h3>
+      <ul>
+        <li>New giant-asteroid shapes, including rare ones with a tunnel bored right through</li>
+        <li>Internal scans take time, then map the veins from the surface inward</li>
+        <li>Salvage harvesters sweep the whole sector; a persistent, scrollable flight log</li>
+        <li>The Codex now documents every rule: drop chances, damage, prices, raids, missions</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v7</b></span>
+      <h3>Solid asteroids and docking</h3>
+      <ul>
+        <li>Big rocks are truly solid: each hit removes one voxel, and cut-loose pieces crumble</li>
+        <li>Giants up to 200 m drift around each sector; hidden ore, silicon, crystal and ice veins</li>
+        <li>Docking computers with real approach ranges; a laggy radar on stock kit</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v6</b></span>
+      <h3>Glitchy sensors and a tighter economy</h3>
+      <ul>
+        <li>Lock time and target data depend on distance; weak sensors glitch and garble</li>
+        <li>Global scans reveal hidden pact spies and deep-space signals</li>
+        <li>Armoured missiles, outpost grades I–V, flak point defence; money is harder to come by</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v5</b></span>
+      <h3>Sensors, power and smarter enemies</h3>
+      <ul>
+        <li>Five navigation-suite levels, target lock, global scan, electronic warfare</li>
+        <li>Power in MW, reactor limits per hull, point-defence turrets</li>
+        <li>Enemies roll personalities and take turns attacking</li>
+        <li>Derelicts, beacons, booby-trapped crates, couriers, wing orders and hired traders</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v4</b></span>
+      <h3>Collisions, music and the first Codex</h3>
+      <ul>
+        <li>Collision boxes, middle-click targeting, three music modes, front politics</li>
+        <li><strong>The Codex</strong>: a searchable archive of every ship, station, ware and sector, generated from the game's own data</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v3</b></span>
+      <h3>The frontier</h3>
+      <ul>
+        <li>The shooter became a living space sim: the Coalition against the CRINK pact</li>
+        <li>33 sectors, a production economy, missions, reputation and a dynamic war front</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v2</b></span>
+      <h3>Campaign</h3>
+      <ul>
+        <li>Credits, a galaxy chart and station shops</li>
+        <li>Geran kamikaze drones learn to dodge fire and, when crippled, back off to snipe</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v1 · 7 Oct 2026</b>First build</span>
+      <h3>The shooter</h3>
+      <ul>
+        <li>A voxel-neon 3D shooter: mouse flight, shields and hull, abilities</li>
+        <li>Eight enemy types, a Dreadnought boss every fifth wave, infinite procedural space</li>
+        <li>Wormholes to harder sectors and black holes to bonus levels</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<footer>
+  <p>Created, designed and directed by <strong>Oleksandr Yurchak</strong> · programmed with AI assistance (Claude, Anthropic).</p>
+  <p>© 2026 Oleksandr Yurchak. All rights reserved. · <a href="https://github.com/yur4ak/freedom-volunteer-devlog">Devlog on GitHub</a></p>
+</footer>
+
+</div>
+</body>
+</html>
