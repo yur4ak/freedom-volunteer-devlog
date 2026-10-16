@@ -1,6 +1,6 @@
 # Freedom Volunteer
 
-![Title screen](assets/cover-1260x1000.png) 
+![Title screen](assets/main_screen_01.jpg) 
 
 A volunteer pilot, a battered Kestrel fighter and a frontier at war. Fly out of
 Kyiv Prime for the Coalition — Ukraine, with the EU and the US behind it — against
