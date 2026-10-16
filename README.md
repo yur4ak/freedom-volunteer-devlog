@@ -36,9 +36,9 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Prototype complete (v9.1) · preparing the public release.**
-Free to play on itch.io is the plan, with an optional donation: **$2–$5 unlocks small cosmetic
-supporter perks**. Nothing that affects combat or the economy is for sale.
+**Pre-release 0.9.11 · public release will be 1.0.0.**
+Free to play on itch.io, with an optional donation: **a donation of $2 or more unlocks small
+cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
 
 ## Where donations go
 
@@ -57,14 +57,23 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 
 # Updates
 
-## 14 Oct 2026 — v9.1: the name is official
+## 15 Oct 2026 — 0.9.11 and the road to 1.0
+- New version scheme: pre-release builds are **0.9.N**; the public release will be **1.0.0**.
+  Earlier builds v1–v10 are renumbered 0.9.1–0.9.10 below
+- The version now shows as a small label in the corner of the HUD
+- The itch.io page is set up and waiting in Draft, with covers, logos, screenshots and a combat GIF
+  captured straight from the game
+- Plan for 1.0: credits, callsigns, save export and import, and the supporter perks.
+  Leaderboards, cloud saves and the Volunteer Wall follow as updates after launch
+
+## 14 Oct 2026 — 0.9.10: the name is official
 - **Freedom Volunteer** is now the name everywhere: title screen, interface and the Codex
 - Supply runs can be split across several trips; the mission board shows a delivery progress bar
   and the HUD counts down what is still due. Miss the deadline and you are still paid half rate
   for what you delivered
 - No more duplicate supply runs for the same goods at the same station
 - The sector map shows its zoom level and the radius in view
-- Donation terms settled: **$2–$5 unlocks the supporter perks**, and **30% of every donation goes to the ZSU**
+- Donation terms settled: **a donation of $2 or more unlocks the supporter perks**, and **30% of every donation goes to the ZSU**
 
 ## 14 Oct 2026 — Getting ready to publish
 - Mapped the full path to a public release in nine steps: decisions, accounts, names and legal,
@@ -81,7 +90,7 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 - Chose itch.io: it handles payments, tax and refunds, and web games are first-class there
 - Perks will be cosmetic only — liveries, a supporter badge, a Volunteer Wall, extra save slots, HUD themes
 
-## v9 — Jammers, warrior ranks and a sound fix
+## 0.9.9 — Jammers, warrior ranks and a sound fix
 - **Zhitel EW jammers**: big, slow, shielded ships whose 500 m fields scramble your sensors.
   Three overlapping fields blind you. They guard every pact command post
 - **Enemy warrior ranks**, from Ryadovoy to General. They scale with your own pilot level,
@@ -91,47 +100,47 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 - Louder, rebalanced audio with a status chip when the browser blocks sound
 - Weapon boosts last 1–3 minutes
 
-## v8 — Rocks, harvesters and the full Codex
+## 0.9.8 — Rocks, harvesters and the full Codex
 - Giant asteroids come in new shapes, including rare ones with a tunnel bored right through
 - Internal scans now take time, then map the veins from the surface inward
 - Salvage harvesters sweep the whole sector for drifting cargo
 - A persistent, scrollable flight log
 - The Codex now documents every rule in the game: drop chances, damage, prices, raids, missions
 
-## v7 — Solid asteroids and docking
+## 0.9.7 — Solid asteroids and docking
 - Big rocks are truly solid: each hit removes exactly one voxel; cut pieces loose and they crumble
 - Giants up to 200 m across drift slowly around each sector; hidden ore, silicon, crystal and ice veins
 - Docking computers with real approach ranges; sensor range jitter and a laggy radar on stock kit
 
-## v6 — Glitchy sensors and a tighter economy
+## 0.9.6 — Glitchy sensors and a tighter economy
 - Lock time and target data depend on distance; weak sensors glitch and garble
 - Global scans reveal hidden pact spies and deep-space signals
 - Armoured missiles, outpost grades I–V, flak point defence
 - Money is harder to come by; a combat-focus HUD fades friendly markers when enemies close in
 
-## v5 — Sensors, power and smarter enemies
+## 0.9.5 — Sensors, power and smarter enemies
 - Five navigation-suite levels, target lock, global scan, electronic warfare
 - Power measured in MW, reactors that limit what a hull can run, point-defence turrets
 - Enemies roll their own personalities and take turns attacking
 - Derelicts, beacons, booby-trapped crates, harvesters, couriers, wing orders and hired traders
 
-## v4 — Collisions, music and the first Codex
+## 0.9.4 — Collisions, music and the first Codex
 - Collision boxes, middle-click targeting, three music modes
 - Economy events and front politics
 - **The Codex**: a searchable archive of every ship, station, ware and sector, generated from the game's own data
 
 ![Sector map](assets/sector.jpg)
 
-## v3 — The frontier
+## 0.9.3 — The frontier
 - The shooter became a living space sim: the Coalition against the CRINK pact
 - 33 sectors, jump gates, a production economy, missions, reputation and a dynamic war front
 - Docking screens, galaxy and sector maps, a pilot log and campaign saves
 
-## v2 — Campaign
+## 0.9.2 — Campaign
 - Credits, a galaxy chart and station shops between sectors
 - The first enemy got its name and its brains: Geran kamikaze drones that dodge fire and, when crippled, back off to snipe
 
-## v1 — 7 Oct 2026 — The shooter
+## 0.9.1 — 7 Oct 2026 — The shooter
 - A voxel-neon 3D shooter: mouse flight, shields and hull, three ships, abilities
 - Eight enemy types, a Dreadnought boss every fifth wave, infinite procedural space
 - Wormholes to harder sectors and black holes to bonus levels
