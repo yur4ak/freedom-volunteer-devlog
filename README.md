@@ -129,7 +129,7 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 - Economy events and front politics
 - **The Codex**: a searchable archive of every ship, station, ware and sector, generated from the game's own data
 
-![Sector map](assets/sector.jpg)
+![Sector map](assets/01-dogfight-zaporizhzhia.png) ![Sector map](assets/03-voxel-asteroid.png)
 
 ## 0.9.3 — The frontier
 - The shooter became a living space sim: the Coalition against the CRINK pact
