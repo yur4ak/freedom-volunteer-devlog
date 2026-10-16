@@ -111,6 +111,7 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 - Big rocks are truly solid: each hit removes exactly one voxel; cut pieces loose and they crumble
 - Giants up to 200 m across drift slowly around each sector; hidden ore, silicon, crystal and ice veins
 - Docking computers with real approach ranges; sensor range jitter and a laggy radar on stock kit
+![Sector map](assets/03-voxel-asteroid.png)
 
 ## 0.9.6 — Glitchy sensors and a tighter economy
 - Lock time and target data depend on distance; weak sensors glitch and garble
@@ -129,7 +130,7 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 - Economy events and front politics
 - **The Codex**: a searchable archive of every ship, station, ware and sector, generated from the game's own data
 
-![Sector map](assets/01-dogfight-zaporizhzhia.png) ![Sector map](assets/03-voxel-asteroid.png)
+![Sector map](assets/01-dogfight-zaporizhzhia.png)
 
 ## 0.9.3 — The frontier
 - The shooter became a living space sim: the Coalition against the CRINK pact
