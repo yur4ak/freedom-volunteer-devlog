@@ -36,7 +36,7 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Pre-release 0.9.11 · public release will be 1.0.0.**
+**Pre-release 0.9.12 · public release will be 1.0.0.**
 Free to play on itch.io, with an optional donation: **a donation of $2 or more unlocks small
 cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
 
@@ -56,6 +56,18 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 ---
 
 # Updates
+
+## 16 Oct 2026 — 0.9.12: pilots, saves and supporters
+- **Hangar menu** on the title screen: Pilot & supporter, Saves, Credits and ♥ Support the game
+- **Callsign**: pick your pilot name (Latin or Cyrillic); it shows in the HUD and in comms
+- **Saves you can carry**: export your campaign as a `.fvsave` file or a short code and import it anywhere,
+  plus 3 automatic backups
+- **Supporter perks**, all cosmetic: Sunflower, Night Watch and Kozak liveries, Founding Volunteer gold trim,
+  a ★ badge, extra save slots and HUD themes (Amber CRT, Vyshyvanka red, Night-vision green).
+  A colorblind-safe HUD theme is free for everyone
+- **Credits** with the open-source licenses and a privacy note: no ads, no tracking
+- The release build is ready: everything in one file, no outside requests
+- Donations: **$2 or more unlocks the perks, and 30% of every donation goes to the ZSU**
 
 ## 15 Oct 2026 — 0.9.11 and the road to 1.0
 - New version scheme: pre-release builds are **0.9.N**; the public release will be **1.0.0**.
