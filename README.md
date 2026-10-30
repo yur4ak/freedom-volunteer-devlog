@@ -36,18 +36,18 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Pre-release 0.9.12 · public release will be 1.0.0.**
-Free to play on itch.io, with an optional donation: **a donation of $2 or more unlocks small
-cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
+**Released · 1.0.2.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
+unlocks small cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
 
 ## Where donations go
 
 **30% of every donation, of any amount, goes to the Armed Forces of Ukraine (ZSU).**
 The rest supports development of the game.
 
-## Try it
+## Play
 
-Coming soon on itch.io. Desktop browser, mouse and keyboard.
+**[Play free on itch.io](https://yur4ak.itch.io/freedom-volunteer)** in a desktop browser with mouse and keyboard,
+or download the offline version (Windows, macOS, Linux: unzip and open `index.html`).
 
 ## Built with
 
@@ -56,6 +56,25 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 ---
 
 # Updates
+
+## 29 Oct 2026 — 1.0.2: hotfix
+- After choosing a HUD theme other than Classic, buttons in the Pilot and Saves tabs stopped responding
+  (switches, Remove token, navigation lights, Save callsign, save slots). Fixed
+
+## 29 Oct 2026 — 1.0.1: leaderboard and new supporter perks
+- **Leaderboard in the hangar**: Combat, Trade, Liberation and This week (combat points since Monday)
+- Opens on **★ supporters only**; untick to see every pilot. **Pin my row** keeps your place in view
+- Scores are sent when you dock, jump or liberate a sector; a private pilot key protects your callsign
+  and travels with save exports. Opt out under Pilot & supporter, which also deletes your entry
+- **New supporter perks**: Ukraine livery (azure and gold), Blue & Gold HUD theme, and navigation lights
+  with three presets: Airliner, Night patrol and Airshow
+
+## 29 Oct 2026 — 1.0.0: out on itch.io
+- **Free to play** in the browser, plus an offline version (unzip and open `index.html`)
+- **Supporter perks are live**: donate $2 or more, then paste the address of your itch.io purchase page
+  under Pilot & supporter → Redeem. The server checks the purchase and returns a signed token tied to your callsign
+- One file, no outside requests; only redeeming and the leaderboard go online
+- **30% of every donation goes to the ZSU**; a running total will be posted here
 
 ## 16 Oct 2026 — 0.9.12: pilots, saves and supporters
 - **Hangar menu** on the title screen: Pilot & supporter, Saves, Credits and ♥ Support the game

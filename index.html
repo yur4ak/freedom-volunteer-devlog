@@ -75,6 +75,8 @@ ol.log ul li{padding:0 0 4px;}
 ol.log ul li::before{display:none;}
 ol.log strong{color:var(--ink);}
 .note{max-width:66ch;color:var(--soft);}
+.play{display:inline-block;margin-top:14px;font:700 15px/1 var(--f-display);letter-spacing:.12em;text-transform:uppercase;color:var(--void);background:var(--cyan);padding:16px 26px;text-decoration:none;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);box-shadow:0 0 28px rgba(94,242,255,.35);}
+.play:hover{color:var(--void);background:#9ff8ff;}
 footer{margin:56px 0 0;padding:20px 0 48px;border-top:1px solid var(--rule);font-size:13.5px;color:var(--mute);}
 footer p{margin:0 0 6px;}
 @media (max-width:640px){.gallery{grid-template-columns:minmax(0,1fr);} header{padding-top:36px;} h1 span{-webkit-text-stroke:1.5px #f4f7ff;}}
@@ -89,8 +91,8 @@ footer p{margin:0 0 6px;}
   <h1>Freedom<span>Volunteer</span></h1>
   <p class="lede">A volunteer pilot, a battered Kestrel fighter and a frontier at war. Fly out of Kyiv Prime for the Coalition — Ukraine, with the EU and the US behind it — against the fictional CRINK pact. Trade and build factories, take contracts, defend the front from raids, liberate occupied sectors, then bring down the Zorus Citadel.</p>
   <div class="status">
-    <span class="chip ok">Pre-release · v0.9.12</span>
-    <span class="chip next">Release · v1.0.0 coming</span>
+    <span class="chip ok">Released · v1.0.2</span>
+    <span class="chip next">Next · online features</span>
     <span class="chip free">Free to play</span>
     <span class="chip zsu">30% of donations to the ZSU</span>
   </div>
@@ -126,7 +128,8 @@ footer p{margin:0 0 6px;}
 
 <section aria-labelledby="h-play">
   <h2 id="h-play">Play</h2>
-  <p class="note">Coming soon on itch.io — free, in a desktop browser, with mouse and keyboard. A donation of <strong>$2 or more</strong> will unlock small <strong>cosmetic</strong> supporter perks. Nothing that affects combat or the economy is for sale.</p>
+  <p class="note">Free on itch.io: play in a desktop browser with mouse and keyboard, or download the offline version for Windows, macOS or Linux. A donation of <strong>$2 or more</strong> unlocks small <strong>cosmetic</strong> supporter perks. Nothing that affects combat or the economy is for sale.</p>
+  <a class="play" href="https://yur4ak.itch.io/freedom-volunteer">Play on itch.io</a>
 </section>
 
 <section aria-labelledby="h-give">
@@ -141,7 +144,34 @@ footer p{margin:0 0 6px;}
   <h2 id="h-log">Updates</h2>
   <ol class="log">
     <li>
-      <span class="when"><b>v0.9.12 · 16 Oct 2026</b>Latest build</span>
+      <span class="when"><b>v1.0.2 · 29 Oct 2026</b>Latest build</span>
+      <h3>Hotfix: Pilot and Saves buttons</h3>
+      <ul>
+        <li>After choosing a HUD theme other than Classic, buttons in the Pilot and Saves tabs stopped responding: switches, Remove token, navigation lights, Save callsign and save slots. Fixed</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v1.0.1 · 29 Oct 2026</b></span>
+      <h3>Leaderboard and new supporter perks</h3>
+      <ul>
+        <li><strong>Leaderboard in the hangar</strong> with four boards: Combat, Trade, Liberation and This week (combat points since Monday, so newcomers always have a chance)</li>
+        <li>The board opens on <strong>★ supporters only</strong>; untick it to see every pilot. <strong>Pin my row</strong> keeps your own place in view while you scroll</li>
+        <li>Scores are sent when you dock, jump or liberate a sector. Your callsign is protected by a private pilot key that travels with your save exports. You can opt out any time under Pilot &amp; supporter, which also deletes your entry</li>
+        <li><strong>New supporter perks</strong>: a Ukraine livery (azure and gold), a Blue &amp; Gold HUD theme, and <strong>navigation lights</strong> with three presets: Airliner, Night patrol and Airshow</li>
+      </ul>
+    </li>
+    <li class="pub">
+      <span class="when"><b>v1.0.0 · 29 Oct 2026</b>Release</span>
+      <h3>Freedom Volunteer is out on itch.io</h3>
+      <ul>
+        <li><strong>Free to play</strong> in the browser, plus an offline version: unzip and open <code>index.html</code></li>
+        <li><strong>Supporter perks are live</strong>: donate $2 or more, then paste the address of your itch.io purchase page under Pilot &amp; supporter → Redeem. The server checks the purchase and returns a signed token tied to your callsign</li>
+        <li>The whole game is one file with no outside requests; only redeeming and the leaderboard go online</li>
+        <li><strong>30% of every donation goes to the ZSU</strong>; a running total will be posted here</li>
+      </ul>
+    </li>
+    <li>
+      <span class="when"><b>v0.9.12 · 16 Oct 2026</b></span>
       <h3>Pilots, saves and supporters</h3>
       <ul>
         <li><strong>Hangar menu</strong> on the title screen: Pilot &amp; supporter, Saves, Credits and ♥ Support the game</li>
