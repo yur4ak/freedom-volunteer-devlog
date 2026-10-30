@@ -36,7 +36,7 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Released · 1.0.2.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
+**Released · 1.0.3.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
 unlocks small cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
 
 ## Where donations go
@@ -56,6 +56,15 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 ---
 
 # Updates
+
+## 30 Oct 2026 — 1.0.3: Volunteer Radio and critical hull damage
+- **Volunteer Radio**: free roaming plays five original pieces at random, never the same twice in a row:
+  *Kyiv Nights*, *Steppe Wind*, *Sunflower Drift*, *Deep Field* and *Volunteer's March*.
+  Played live by the game's own synthesizer. Listen: [Steppe Wind](assets/radio-steppe-wind.mp3)
+- **Critical hull**: below 10% hull, systems fail a few seconds at a time: blasters jam, the shield drops,
+  engines sputter, sensors black out, the reactor leaks power. A red *Hull critical* chip shows what is down
+- **Wrecked upgrades**: keep taking hits at critical hull and an upgraded module can drop back to stock Mk 1;
+  the log names it. Break off and dock before it gets that far
 
 ## 29 Oct 2026 — 1.0.2: hotfix
 - After choosing a HUD theme other than Classic, buttons in the Pilot and Saves tabs stopped responding
