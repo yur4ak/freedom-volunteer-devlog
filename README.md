@@ -61,6 +61,7 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 - After choosing a HUD theme other than Classic, buttons in the Pilot and Saves tabs stopped responding
   (switches, Remove token, navigation lights, Save callsign, save slots). Fixed
 
+![Leaderboard](assets/t2_title_all.png)
 ## 29 Oct 2026 — 1.0.1: leaderboard and new supporter perks
 - **Leaderboard in the hangar**: Combat, Trade, Liberation and This week (combat points since Monday)
 - Opens on **★ supporters only**; untick to see every pilot. **Pin my row** keeps your place in view
