@@ -63,8 +63,10 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 - **Bigger hulls hit harder**: Lyutyi now has 3 guns and 120 hull, Ruslan 4 guns, a 10-missile rack and 5 Neptunes, Mriya 8 guns and 10 Neptunes. Heavy hulls fire half their guns in every volley. Each missile rack upgrade adds a Neptune bay
 - **Point defence** now fires at every enemy in reach, big ships included, but incoming missiles always come first
 - **Space-Time Drive**: jump to any sector in the galaxy at once for 10 Energy Cells, 5 Crystals and 1 Ore. It is rare: the volunteer net announces each shipment hours before it reaches a facility, and it is on sale for only 2 hours
-- **Moskva cruisers** guard every pact base, with guns, Kalibr missiles and a jamming field. The Citadel has 5 to 10 of them
-- **Shahed raids**: every 10 minutes the pact launches drones at every Ukrainian sector on the front line. Be there and you hear the siren and can shoot them down before they reach the stations
+- **Moskva cruisers** guard every pact base, with guns, Kalibr missiles and a jamming field. The Citadel has 5 to 10 of them. Sink one and the pact sends a replacement an hour later
+- **Shahed raids**: every 10 minutes the pact launches drones at every Ukrainian sector on the front line, aimed mainly at military bases and your factories. Be there and you hear the siren and can shoot them down before they hit
+- **Defend your factories**: each one starts with a gun turret. Add up to 5 turrets and a shield generator, from the factory or remotely from the pilot log. Damaged factories slowly repair themselves, and you can give each one a short name
+- **Pick your callsign** when a new campaign starts, or fly as Incognito
 - **Reinforcements**: attack a pact base and every pact fleet sends ships within a few minutes. The higher your rank, the more of them
 - **Radio chatter** from nearby patrols, haulers, wingmen and stations, plus some intercepted pact talk
 
