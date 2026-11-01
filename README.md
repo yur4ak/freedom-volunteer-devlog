@@ -2,7 +2,7 @@
 
 ![Title screen](assets/title.jpg) 
 
-A volunteer pilot, a battered Kestrel fighter and a frontier at war. Fly out of
+A volunteer pilot, a battered Potuzhnyi fighter and a frontier at war. Fly out of
 Kyiv Prime for the Coalition — Ukraine, with the EU and the US behind it — against
 the fictional CRINK pact. Trade and build factories, take contracts, defend the
 front from raids, liberate occupied sectors, break the three pact strongholds,
@@ -36,7 +36,7 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Released · 1.0.3.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
+**Released · 1.0.4.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
 unlocks small cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
 
 ## Where donations go
@@ -56,6 +56,17 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 ---
 
 # Updates
+
+## 1 Nov 2026 — 1.0.4: Shahed raids, Moskva cruisers and the Space-Time Drive
+
+- **Potuzhnyi**: the starter ship has a new name. Your saves keep working
+- **Bigger hulls hit harder**: Lyutyi now has 3 guns and 120 hull, Ruslan 4 guns, a 10-missile rack and 5 Neptunes, Mriya 8 guns and 10 Neptunes. Heavy hulls fire half their guns in every volley. Each missile rack upgrade adds a Neptune bay
+- **Point defence** now fires at every enemy in reach, big ships included, but incoming missiles always come first
+- **Space-Time Drive**: jump to any sector in the galaxy at once for 10 Energy Cells, 5 Crystals and 1 Ore. It is rare: the volunteer net announces each shipment hours before it reaches a facility, and it is on sale for only 2 hours
+- **Moskva cruisers** guard every pact base, with guns, Kalibr missiles and a jamming field. The Citadel has 5 to 10 of them
+- **Shahed raids**: every 10 minutes the pact launches drones at every Ukrainian sector on the front line. Be there and you hear the siren and can shoot them down before they reach the stations
+- **Reinforcements**: attack a pact base and every pact fleet sends ships within a few minutes. The higher your rank, the more of them
+- **Radio chatter** from nearby patrols, haulers, wingmen and stations, plus some intercepted pact talk
 
 ## 30 Oct 2026 — 1.0.3: Volunteer Radio and critical hull damage
 - **Volunteer Radio**: free roaming plays five original pieces at random, never the same twice in a row:
