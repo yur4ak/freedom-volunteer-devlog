@@ -36,7 +36,7 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Released · 1.0.4.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
+**Released · 1.0.5.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
 unlocks small cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
 
 ## Where donations go
@@ -56,6 +56,15 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 ---
 
 # Updates
+
+## 9 Nov 2026 — 1.0.5: Ambush at the gate, medals and the most wanted aces
+
+- **Straight into the fight**: a new campaign now starts with your first patrol ambushed at a gate in pact space. Two wingmen fly with you, and the gate home is right behind you
+- **Volunteer Radio, the way it used to sound**: all five roaming pieces are rebuilt on the original cruising theme, with the same soft pads, bass and arpeggio and no arcade melodies. "Kyiv Nights" is the original theme itself
+- **Medals**: 17 decorations for kills, Shaheds, Moskvas, freed sectors, saved freighters, trade and more. Each pays a credit grant. See them in the pilot log
+- **Most wanted**: six named pact aces fly from pact bases with bounties of 6,000 to 20,000 Cr. The pilot log shows where each was last seen, and one of them may come hunting you
+- **Shahed raids pay**: the HUD counts the drones left, a report closes each raid, and you earn credits per drone with a bonus when none gets through
+- **Smoother long sessions**: fixed a memory leak that grew with every sector jump, and the HUD does less work per frame
 
 ## 1 Nov 2026 — 1.0.4: Shahed raids, Moskva cruisers and the Space-Time Drive
 
