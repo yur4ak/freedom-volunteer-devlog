@@ -38,6 +38,8 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 **Released · 1.0.5.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
 unlocks small cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/642bcf8c-e0dc-45bd-98ab-096f693fe67d" />
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/36219964-414a-4203-9660-b0bc6918228a" />
 
 ## Where donations go
 
