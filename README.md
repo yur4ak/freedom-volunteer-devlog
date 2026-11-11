@@ -38,8 +38,6 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 **Released · 1.0.5.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
 unlocks small cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
-<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/642bcf8c-e0dc-45bd-98ab-096f693fe67d" />
-<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/36219964-414a-4203-9660-b0bc6918228a" />
 
 ## Where donations go
 
@@ -67,6 +65,8 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 - **Most wanted**: six named pact aces fly from pact bases with bounties of 6,000 to 20,000 Cr. The pilot log shows where each was last seen, and one of them may come hunting you
 - **Shahed raids pay**: the HUD counts the drones left, a report closes each raid, and you earn credits per drone with a bonus when none gets through
 - **Smoother long sessions**: fixed a memory leak that grew with every sector jump, and the HUD does less work per frame
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/642bcf8c-e0dc-45bd-98ab-096f693fe67d" />
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/36219964-414a-4203-9660-b0bc6918228a" />
 
 ## 1 Nov 2026 — 1.0.4: Shahed raids, Moskva cruisers and the Space-Time Drive
 
