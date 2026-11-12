@@ -57,13 +57,20 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 
 # Updates
 
-## 9 Nov 2026 — 1.0.5: Ambush at the gate, medals and the most wanted aces
+## 9 Nov 2026 — 1.0.5: Ambush at the gate, weekly aces, hot pursuit and a living economy
 
 - **Straight into the fight**: a new campaign now starts with your first patrol ambushed at a gate in pact space. Two wingmen fly with you, and the gate home is right behind you
 - **Volunteer Radio, the way it used to sound**: all five roaming pieces are rebuilt on the original cruising theme, with the same soft pads, bass and arpeggio and no arcade melodies. "Kyiv Nights" is the original theme itself
 - **Medals**: 17 decorations for kills, Shaheds, Moskvas, freed sectors, saved freighters, trade and more. Each pays a credit grant. See them in the pilot log
 - **Most wanted**: six named pact aces fly from pact bases with bounties of 6,000 to 20,000 Cr. The pilot log shows where each was last seen, and one of them may come hunting you
 - **Shahed raids pay**: the HUD counts the drones left, a report closes each raid, and you earn credits per drone with a bonus when none gets through
+- **Most wanted, every week**: a new list of six aces every Monday, 30 to 90% stronger than ordinary pilots and armed with AA missiles. Your record keeps every ace you shot down and every credit of bounty
+- **AA missiles**: some pact fighters now carry homing missiles. When the HUD warns of a lock, break hard at the last moment or shoot it down
+- **Hot pursuit**: strike a pact base and run, and the fleet follows you through the gate. Run again and the sector behind you takes the blow, and it can fall
+- **A living economy**: money from trade, mining and factories now drives inflation, measured against what the free Coalition produces. Gear costs more as prices rise, fighting pay rises with them, and flooding one market lowers what it pays. Traders keep working with little or no cash
+- **Orders of the day**: three jobs from Kyiv Command every day, a bonus for all three and a daily streak worth up to +50%
+- **Bigger bangs**: layered missile explosions with shock rings and sparks, and Javelins and Neptunes now blast craters into asteroids
+- **Small things**: Z is a throttle switch, big hulls pull in cargo from further away and pay more for upgrades, and a quiet engine drone hums under the music
 - **Smoother long sessions**: fixed a memory leak that grew with every sector jump, and the HUD does less work per frame
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/642bcf8c-e0dc-45bd-98ab-096f693fe67d" />
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/36219964-414a-4203-9660-b0bc6918228a" />
