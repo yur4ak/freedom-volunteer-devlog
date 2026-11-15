@@ -36,7 +36,7 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Released · 1.0.5.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
+**Released · 1.0.6.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
 unlocks small cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
 
 ## Where donations go
@@ -56,6 +56,21 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 ---
 
 # Updates
+
+## 14 Nov 2026 — 1.0.6: Living spaces, a real supply chain and the Iron Curtain belt
+
+- **Living spaces**: every sector with stations now has a town at its core, built up block by block and bigger in busy sectors. About 137,000 people need Energy, Water, Rations, Medical Kits and Consumer Electronics, and make Trash
+- **People run the sector**: well-supplied people make every factory around them up to 10% faster; short of food or water, the sector slows to 60%. Target a living space to see its people, mood and shortages
+- **New production**: Ice Mines make Water, Electronics Plants make Consumer Electronics, farms and kitchens burn Trash for +20% output, and ice asteroids now give Water when you mine them
+- **Traffic you can see**: yellow cabs carry workers between the living space and the stations, Ore and Grain Barges haul bulk cargo, and Trash Scows take the rubbish to the farms
+- **Shaheds go for the people**: raids now aim at the living spaces first. Every drone that gets through costs people and slows the whole sector
+- **A real supply chain**: ships, modules, factory kits and missiles are built from what the station has in stock. If a shipyard is short, the buy button shows the missing parts in red: bring them in or wait for the freighters
+- **Move your factories**: fly where you want it and press Move here in the pilot log: tugs tow it to you for 1,000 Cr per 100 m, and it keeps working on the way
+- **The Iron Curtain belt**: a dense asteroid belt now rings the edge of Iron Curtain, 5.5 to 7 km out
+- **Finer stations**: blocks twice as fine, bevelled edges, more lights, vents and machinery
+- **Big ships fit**: the Mriya and other big hulls no longer fill the singularity tunnel or the title screen
+- **Ctrl+0**: four pages of live stats: the economy ware by ware, every sector's people and shortages, war timers, aces and orders, and engine numbers
+- **Lifeline**: a new medal and a new order of the day for bringing supplies to the living spaces
 
 ## 9 Nov 2026 — 1.0.5: Ambush at the gate, weekly aces, hot pursuit and a living economy
 
