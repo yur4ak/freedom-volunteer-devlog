@@ -36,7 +36,7 @@ A 3D space sim in voxel-neon style that plays in the browser, no install.
 
 ## Status
 
-**Released · 1.0.6.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
+**Released · 1.0.7.** Free to play on itch.io, with an optional donation: **a donation of $2 or more
 unlocks small cosmetic supporter perks**. Nothing that affects combat or the economy is for sale.
 
 ## Where donations go
@@ -56,6 +56,16 @@ JavaScript · Three.js · WebGL · procedural voxels · synthesized audio · no 
 ---
 
 # Updates
+
+## 17 Nov 2026 — 1.0.7: Dock side-on, ships at the ports, the Iron Curtain stripe
+
+- **Docking ports**: every station has 10 to 20 green ports round its hull that pulse slowly while free. You dock side-on: flank against the plate, roll Q/E, strafe A/D and R/F, then Enter, or drift in and the clamps take you
+- **Docking computer**: Mk 2 and Mk 3 lead you to a free port and leave the last metres to you; Mk 4 and Mk 5 dock by themselves
+- **Ships at the ports**: freighters, barges, scows and cabs dock side-on and hang there while their cargo moves, then cast off
+- **Blinking lights**: a few slow blinking lights on every station, and the living-space beacons now sit on the roofs
+- **The Iron Curtain stripe**: one dense kilometre-long band of real asteroids at the edge of the sector
+- **Stations mean people**: your first factory in an empty sector founds a living space for its workers
+- **A calmer view**: markers fade out away from the middle of the screen, and the speed streaks are fewer and fainter
 
 ## 14 Nov 2026 — 1.0.6: Living spaces, a real supply chain and the Iron Curtain belt
 
